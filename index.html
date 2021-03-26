@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="node_modules/jquery/src/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>
         Searcher
     </title>
 </head>
-<body>
-    <input id="searcher">
-    <button type="button" onclick="consultaCep()">
-        Search by CEP
-    </button>
-    <p id="dados"></p>
+<body style="background-image: url('img/imgBackground.jpg')">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <form class="d-flex">
+              <input  id="searcher" class="form-control me-2" type="search" placeholder="CEP" aria-label="Search" data-mask= "00000-000" maxlength="8">
+              <button class="btn btn-outline-success" type="submit" onclick="consultaCep()">Pesquisa CEP</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <p class="consultCep"> Logradouro: </p>
+      <p id="rua"></p>
+      <p class="consultCep"> Bairro: </p>
+      <p id="bairro"></p>
+      <p class="consultCep" > Cidade: </p>
+      <p id="localidade"></p>
+      <p class="consultCep" > Estado: </p>
+      <p id="estado"></p>
 </body>
 </html>
